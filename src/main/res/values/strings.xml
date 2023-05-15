@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Calculadora Salarial</string>
+    <string name="titulo">Calculadora de Salarios</string>
+    <string name="idSalario">Ingresar Salario Base</string>
+    <string name="idHorasExtras">Ingresar Cantidad de Horas Extras</string>
+    <string name="idBonificaciones">Elegi 1 si hay bonificaciones si no 0</string>
+    <string name="Opcion0">No</string>
+    <string name="Opcion1">Si</string>
+    <string name="Boton">Calcular</string>
+    <string name="Resultado">Valor a Pagar</string>
+</resources>
