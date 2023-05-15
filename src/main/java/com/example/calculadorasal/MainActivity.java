@@ -8,15 +8,16 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import com.example.calculadorasal.modelo.SalarioCalculo;
+import com.example.calculadorasal.modelo.service.SalaryCalculationService;
+import com.example.calculadorasal.modelo.service.imple.SalaryCalculationServiceImpl;
 
 public class MainActivity extends AppCompatActivity {
 //declarado elementos
     private TextView textViewResul;
-    private EditText idSalario, idHorasExtras;
-
-    private RadioButton radioButton1, radioButton2;
-
+    private EditText idSalario;
+    private EditText idHorasExtras;
+    private RadioButton radioButtonNo;
+    private RadioButton radioButtonSi;
 
 
     @Override
@@ -27,27 +28,27 @@ public class MainActivity extends AppCompatActivity {
         textViewResul = findViewById(R.id.textViewResul);
         idSalario = findViewById(R.id.idSalario);
         idHorasExtras = findViewById(R.id.idHorasExtras);
-        radioButton1 = findViewById(R.id.radioButton1);
-        radioButton2 = findViewById(R.id.radioButton2);
+        radioButtonNo = findViewById(R.id.radioButtonNo);
+        radioButtonSi = findViewById(R.id.radioButtonSi);
 
     }
 
-    /**public void CalculoObjeto(View View) {
+
+    public void CalcularSalario(View view){
+        SalaryCalculationServiceImpl salaryCalculationService = new SalaryCalculationServiceImpl();
+        float salarioBase = Float.parseFloat(idSalario.getText().toString());
+        int idHorasEx = Integer.parseInt(idHorasExtras.getText().toString());
+        String bonusSi = radioButtonSi.getText().toString();
+        String bonusNo = radioButtonNo.getText().toString();
+        boolean bonus = false;
+        if (bonusSi.equals("Si")){
+            bonus = true;
+        }
+
+        float salarioCalculado = salaryCalculationService.calculateMonthSalary(salarioBase, idHorasEx, bonus);
+        textViewResul.setText(String.valueOf(salarioCalculado));
+    }
 
 
-        SalarioCalculo calcSalEmpleado = new SalarioCalculo(
-                idSalario.getText().toString(),
-                idHorasExtras.getText().toString(),
-                radioButton1.getText().toString(),
-                radioButton2.getText().toString());
-        textViewResul.setText((int)calcSalEmpleado.calcularSalario());
-    }**/
-
-
-
-    public void Calcular(View view) {
-        SalarioCalculo calculo = new SalarioCalculo();
-
-       textViewResul.setText((int) calculo.calcularSalario());
 }
-}
+

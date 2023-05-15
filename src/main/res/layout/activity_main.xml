@@ -89,13 +89,13 @@
             android:layout_marginStart="50dp">
 
             <RadioButton
-                android:id="@+id/radioButton1"
+                android:id="@+id/radioButtonNo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Opcion0" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/radioButtonSi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Opcion1" />
@@ -110,7 +110,7 @@
             android:layout_marginRight="110dp"
             android:background="#FFC107"
             android:backgroundTint="#FFC107"
-            android:onClick="Calcular"
+            android:onClick="CalcularSalario"
             android:text="@string/Boton"
             android:textColor="#000000" />
 
