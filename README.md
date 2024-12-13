@@ -33,3 +33,8 @@ Este proyecto de Calculadora de Salarios se desarrolló utilizando las siguiente
 **Servicio de cálculo:** Implementado en la clase SalaryCalculationServiceImpl, 
 donde se encuentra la lógica encargada de realizar las operaciones matemáticas necesarias para calcular el salario mensual final, 
 considerando las entradas del usuario.
+
+**🎨 Demostración Visual**
+
+![Screenshot_20241211-154310_Calculadora Salarial](https://github.com/user-attachments/assets/25e5a251-6042-4db6-8c9a-0417cee23dec)
+![Screenshot_20241211-154431_Calculadora Salarial](https://github.com/user-attachments/assets/31eac7fe-e96f-4320-9487-4247c3aec91f)
